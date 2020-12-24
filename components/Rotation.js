@@ -32,13 +32,7 @@ AFRAME.registerComponent("terrain-rotation-reader", {
 
 //Plane rotation component
 AFRAME.registerComponent("plane-rotation-reader", {
-  schema: {
-    speedOfRoation: { type: "number", default: 0 },
-  },
-  init: function () {
-    console.log("Welcome to Virtual Flight !!!");
-  },
-
+  
   update: function () {
     // Key Down Event
     window.addEventListener("keydown", (e) => {
