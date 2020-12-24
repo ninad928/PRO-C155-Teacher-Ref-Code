@@ -31,13 +31,21 @@ AFRAME.registerComponent("flying-birds", {
     birdEl.setAttribute("position",position);
     birdEl.setAttribute("scale",{ x: 500,y: 500,z: 500 });
 
+    //set the gLTF model attribute
     birdEl.setAttribute(
       "gltf-model",
       "./assets/models/flying_bird/scene.gltf"
     );
 
-    
+    //set animation mixer of models with animation
     birdEl.setAttribute("animation-mixer",{});
+
+    //set the static body of the physic system
+    birdEl.setAttribute("static-body", {
+      shape: "sphere",
+      sphereRadius: 3.2
+    })
+    
 
     //append the bird entity as the child of the terrain entity
     terrainEl.appendChild(birdEl);
