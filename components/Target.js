@@ -16,7 +16,7 @@ AFRAME.registerComponent("target-ring", {
       //call the function
       this.createRings(id, position);
     }
-  } ,
+  },
 
   createRings: function(id,position) {
     var terrainEl = document.querySelector("#terrain");
@@ -31,6 +31,10 @@ AFRAME.registerComponent("target-ring", {
     ringEl.setAttribute("static-body", {
       shape: "sphere",
       sphereRadius: 2
+    });
+
+    ringEl.setAttribute("game-play", {
+      elementId: `#${id}`
     });
     
     terrainEl.appendChild(ringEl);

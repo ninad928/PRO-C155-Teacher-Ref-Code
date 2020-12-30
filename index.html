@@ -2,10 +2,11 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
-    
+
     <script src="./components/Rotation.js"></script>
     <script src="./components/Target.js"></script>
     <script src="./components/Collider.js"></script>
@@ -13,7 +14,7 @@
   </head>
 
   <body>
-    <a-scene background="color:#026F90" physics>
+    <a-scene background="color:#026F90">
       <a-entity id="look" look-controls camera position="0 2 20"></a-entity>
 
       <!--Asset Management-->
@@ -50,12 +51,10 @@
         scale="1 1 1"
         rotation="0 90 0"
         plane-rotation-reader
+        dynamic-body="mass: 0"
         game-play
-        dynamic-body="shape:sphere;sphereRadius:3.5"
       >
       </a-entity>
-      
-
     </a-scene>
   </body>
 </html>
